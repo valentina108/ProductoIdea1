@@ -4,17 +4,19 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
-@Table(name = "Libros")
+@Table(name = "productos")
 @Data
 public class Libro {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_producto")
     private Long idLibro;
 
+    @Column(name = "nombre_producto")
     private String titulo;
 
     private String autor;
     private double precio;
-    private int stock;
+    private Integer stock;
     private String isbn;
 }
