@@ -16,6 +16,7 @@ public class Libro {
     private String titulo;
 
     private String autor;
+    @Column(name = "precio", columnDefinition = "DECIMAL(10,2)")
     private double precio;
     private Integer stock;
     private String isbn;
